@@ -1,0 +1,17 @@
+#modal.modal
+  img.modal__close.js-closeModal(src="img/svg/icon-modal-button-close.svg", alt="close")
+
+  .order-form 
+    .order-form__box 
+      h2.title.order-form__title.order-form__title--white Оставить заявку
+      form.form.order-form__form(action="#")
+        input.form__input.form__input--white.form__input--pb(type="text" placeholder="ИМЯ")
+        input.form__input.form__input--white.form__input--pb.js-maskPhone(type="text" placeholder="ТЕЛЕФОН")
+        span.form__agree.form__agree--white.form__agree--margin Отправляя данные, Вы соглашаетесь с условиями #[br] пользовательского соглашения
+        button.form__btn.form__btn--white.form__btn--modal отправить
+//
+  .modal-thanks 
+    .modal-thanks__title Спасибо! #[br] заявка отправлена
+    p.modal-thanks__text Наши менеджеры с вами #[br] свяжутся
+    img.modal-thanks__icon(src="img/svg/icon-thanks.svg", alt="icon")
+

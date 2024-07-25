@@ -1,0 +1,47 @@
+.footer{
+  &__box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.8rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid $color-1;
+    @media(max-width: 768px){
+      flex-direction: column;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__contacts{
+    padding-top: 0.8rem;
+    @media(max-width: 768px){
+      padding-top: 0;
+      text-align: right;
+    }
+  }
+  &__val{
+    display: block;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-1;
+    @media(max-width: 768px){
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
+  }
+  &__logo{
+    width: 23.3rem;
+    transform: translateX(3.6rem);
+    @media(max-width: 768px){
+      position: absolute;
+      top: 3.6rem;
+      left: 0;
+      width: 16.4rem;
+      transform: none;
+    }
+  }
+  &__links{
+    text-align: right;
+  }
+}

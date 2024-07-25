@@ -1,0 +1,33 @@
+.order-form{
+  padding-bottom: 14.6rem;
+  @media(max-width: 768px){
+    padding-bottom: 7.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &__title{
+    margin-bottom: 3rem;
+    &--white{
+      color: $color-3;
+    }
+    @media(max-width: 768px){
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__box{
+    width: 61.2rem;
+    margin: 0 auto 3rem auto;
+    @media(max-width: 768px){
+      width: 100%;
+    }
+  }
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  &__icon{
+    width: 3.2rem;
+  }
+}

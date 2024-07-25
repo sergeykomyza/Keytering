@@ -1,0 +1,186 @@
+.about{
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  @media(max-width: 768px){
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  &__box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8.5rem 0;
+    @media(max-width: 768px){
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+  &__title{
+    margin-bottom: 10rem;
+    @media(max-width: 768px){
+      margin-bottom: 2rem;
+    }
+  }
+  &__item{
+    &--menu{
+      width: 37rem;
+      padding-right: 5.6rem;
+      border-right: 1px solid $color-1;
+      @media(max-width: 768px){
+        width: 45%;
+        margin-bottom: 4.3rem;
+        padding-right: 0;
+        border-right: none;
+        text-align: center;
+      }
+    }
+    &--team{
+      width: 43rem;
+      padding-left: 5.5rem;
+      padding-right: 6.6rem;
+      @media(max-width: 768px){
+        width: 44%;
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+    &--info{
+      width: 60rem;
+      @media(max-width: 768px){
+        order: -1;
+        width: 100%;
+        margin-bottom: 8rem;
+      }
+    }
+    &--slogan{
+      display: flex;
+      align-items: center;
+      @media(max-width: 768px){
+        order: 1;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    &--size{
+      width: 29rem;
+      padding-right: 5rem;
+      border-right: 1px solid $color-1;
+      @media(max-width: 768px){
+        width: 47%;
+        margin-bottom: 4.4rem;
+        padding-right: 0;
+        border-right: none;
+        text-align: center;
+      }
+    }
+    &--turnkey{
+      width: 40.5rem;
+      padding-left: 5.5rem;
+      padding-right: 5rem;
+      border-right: 1px solid $color-1;
+      @media(max-width: 768px){
+        width: 50%;
+        padding-right: 0;
+        padding-left: 0;
+        border-right: none;
+        text-align: center;
+      }
+    }
+    &--geo{
+      width: 37.7rem;
+      padding-left: 5.4rem; 
+      @media(max-width: 768px){
+        width: 100%;
+        margin-bottom: 7rem;
+        padding-left: 0;
+        text-align: center;
+      }   
+    }
+  }
+  &__icon{
+    &--menu{
+      width: 19.7rem;
+      margin-bottom: 1.7rem;
+      @media(max-width: 768px){
+        width: 17.5rem;
+        margin-bottom: 1.4rem;
+      }
+    }
+    &--team{
+      width: 15.7rem;
+      margin-top: -3.1rem;
+      margin-bottom: 0.1rem;
+      @media(max-width: 768px){
+        width: 11.9rem;
+        margin-top: -1.8rem;
+        margin-bottom: 1.4rem;
+      }
+    }
+    &--size{
+      width: 15.9rem;
+      margin-bottom: 0.3rem;
+      @media(max-width: 768px){
+        width: 14.3rem;
+        margin-bottom: 1.3rem;
+      }
+    }
+    &--turnkey{
+      width: 14.9rem;
+      margin-top: 0.9rem;
+      margin-bottom: 1.1rem;
+      @media(max-width: 768px){
+        width: 14.3rem;
+        margin-top: 0.6rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+    &--geo{
+      width: 13.3rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__name{
+    margin-bottom: 2rem;    
+    font-family: $font-3;
+    font-size: 3.6rem;
+    line-height: 1;
+    color: $color-1;
+    @media(max-width: 768px){
+      font-size: 3.6rem;
+    }
+  }
+  &__text{
+    font-family: $font-1;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-1;
+    @media(max-width: 768px){
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
+  }
+  &__info{
+    font-family: $font-4;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: $color-1;
+    @media(max-width: 768px){
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+  &__slogan{
+    width: 32.8rem;
+    transform: translate(-6.3rem, -1rem);
+    font-family: $font-4;
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 4rem;
+    color: $color-1;
+    text-transform: uppercase;
+    text-align: center;
+    @media(max-width: 768px){
+      transform: none;
+    }
+  }
+}

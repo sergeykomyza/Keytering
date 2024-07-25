@@ -1,0 +1,12 @@
+section.present 
+  .title-box
+    h1.present__title Банкеты & кейтеринг
+  .present__sliderbox
+    .present__slider.swiper.js-sliderPresent 
+      .swiper-wrapper 
+        each item in [3, 4, 1, 2, 5] 
+          .swiper-slide 
+            img.present__foto(src=`img/compress/home-slide-${item}.webp`, alt="foto")
+        each item in [3, 4, 1, 2, 5] 
+          .swiper-slide 
+            img.present__foto(src=`img/compress/home-slide-${item}.webp`, alt="foto")

@@ -1,0 +1,38 @@
+include ./../mixins/_mixin.pug
+
+-
+  const menu = [
+    {link: 'Услуги', href: '#formats'},
+    {link: 'Меню', href: '#catalog'},
+    {link: 'Площадки', href: '#places'},
+    {link: 'Проведенные мероприятия', href: '#case'},
+    {link: 'Контакты', href: '#contacts'}
+  ]
+
+header.header
+  .container-fix 
+    .header__box 
+      a.header__mobilephone(href="tel:+78124457852")
+        img(src="img/svg/icon-phone.svg", alt="@")
+      .header__contacts
+        a.header__val(href="mailto:banket@shalyapinspb.ru") banket@shalyapinspb.ru
+        a.header__val(href="tel:+78124457852") +7 (812) 445-78-52
+      img.header__logo(src="img/svg/logo.svg", alt="@")
+      .header__actions
+        .header-select
+          .header-select__curr
+            span.header__val Банкеты & Кейтеринг
+            img.header__iconarrow(src="img/svg/icon-header-arrow-down.svg", alt="@")
+        a.header__val(href="#")  EN
+      button.header__mmenubtn.js-mMenuToggle
+    nav.menu 
+      ul.menu__list 
+        each item in menu 
+          li.menu__item 
+            a.menu__link(href=`${item.href}`)= item.link 
+      .header-select.menu__select
+        .header-select__curr
+          span.header__val Банкеты & Кейтеринг
+          img.header__iconarrow(src="img/svg/icon-header-arrow-down.svg", alt="@")
+      a.header__val.menu__email(href="mailto:banket@shalyapinspb.ru") banket@shalyapinspb.ru
+      a.header__val.menu__phone(href="tel:+78124457852") +7 (812) 445-78-52

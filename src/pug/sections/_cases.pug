@@ -1,0 +1,17 @@
+section.cases#case
+	.title-box
+		h2.title.title-gold.cases__title Проведенные мероприятия
+	.cases__sliderbox
+		.cases__slider.swiper.js-sliderCases 
+			.swiper-wrapper 
+				each item in [2, 3, 1, 3, 2, 1]
+					.swiper-slide 
+						.case 
+							a(href=`img/compress/keys-slide-${item}.webp` data-fancybox="cases")
+								img.case__foto(src=`img/compress/keys-slide-${item}.webp`, alt="@")
+							span.case__name Открытие музея Фаберже
+			.cases__nav
+				button.swiper-btn.swiper-btn-prev
+					img(src="img/svg/icon-keys-arrow-left.svg", alt="@")
+				button.swiper-btn.swiper-btn-next
+					img(src="img/svg/icon-keys-arrow-right.svg", alt="@")

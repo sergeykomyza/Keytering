@@ -1,0 +1,24 @@
+section.formats#formats
+  .container
+    .title-box 
+      h2.title.title-white.formats__title Форматы #[br] кейтеринга
+    .swiper.formats__slider.js-sliderFormat 
+      .swiper-wrapper 
+        each item in [1, 2, 3, 4, 5] 
+          .swiper-slide 
+            .format
+              img.format__foto1(src="img/compress/format-slide-1.webp", alt="@")
+              .format__info
+                h6.format__title Свадебные торжества
+                p.format__text Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы ваш праздник прошёл незабываемо, а вам, при этом, не пришлось ни о чём беспокоиться.
+                p.format__text Банкетный менеджер поможет вам определиться с наилучшим вариантом накрытия, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом ваших вкусов и пожеланий. Мы предлагаем широкий выбор блюд русской и европейской кухни под различные ценовые категории и форматы. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус
+              img.format__foto2(src="img/compress/format-slide-2.webp", alt="@")
+      .formats__nav
+        button.formats__navbtn.formats__navbtn--prev
+          img(src="img/svg/icon-format-arrow-left.svg", alt="@")
+        .formats__pagination
+        button.formats__navbtn.formats__navbtn--next
+          img(src="img/svg/icon-format-arrow-right.svg", alt="@")
+    button.formats__button.js-openModal(data-src="#modal") Связаться с менеджером
+
+include ./../sections/_modal.pug

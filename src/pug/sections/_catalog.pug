@@ -1,0 +1,16 @@
+section.catalog#catalog
+  .title-box
+    h2.title.title-gold.catalog__title Фуршетный #[br] каталог 
+  .catalog__sliderbox 
+    .catalog__slider.swiper.js-sliderCatalog 
+      .swiper-wrapper 
+        each item in [3, 2, 1, 4, 5]
+          .swiper-slide
+            a(href=`img/compress/catalog-slide-${item}.webp` data-fancybox="gallery")  
+              img.catalog__foto(src=`img/compress/catalog-slide-${item}.webp`, alt="foto") 
+        each item in [3, 2, 1, 4, 5]
+          .swiper-slide 
+            a(href=`img/compress/catalog-slide-${item}.webp` data-fancybox="gallery")
+              img.catalog__foto(src=`img/compress/catalog-slide-${item}.webp`, alt="foto") 
+      .swiper-pagination
+  a.catalog__download(href="#" download) скачать каталог 

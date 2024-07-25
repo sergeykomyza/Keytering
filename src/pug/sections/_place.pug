@@ -1,0 +1,40 @@
+section.places#places
+  .container
+    .title-box 
+      h2.title.title-white.places__title Площадки #[br] для мероприятий
+    .places__box
+      each item in ['Городской «Шаляпин»','Дачный «Шаляпин»','Ресторан «Арка»','Другие площадки']
+        .place 
+          .place__head
+            h6.place__name= item
+            span.place__iconbox 
+              img.place__icon(src="img/svg/icon-accordeon-arrow.svg", alt="@")
+          .place__body 
+            .place__inner 
+              .place__info 
+                .place__infobox 
+                  span.place__infoname Банкентный зал
+                  ul.place__infolist 
+                    li.place__infoval Банкет до 30 гостей
+                    li.place__infoval Фуршет до 40 гостей
+                .place__infobox
+                  span.place__infoname II зал
+                  ul.place__infolist 
+                    li.place__infoval Банкет до 50 гостей
+                    li.place__infoval Фуршет до 60 гостей
+              .place__content 
+                p.place__text Элегантный ресторан в стиле петербургской квартиры начала ХХ века. В меню – традиционная русская кухня в современном прочтении и популярные европейские блюда. Для больших компаний разработаны специальные праздничные предложения — баранья нога, стерлядь горячего копчения, запеченная утка с яблоками. Кондитеры ресторана славятся шоколадными конфетами ручной работы и оригинальными тортами. В ресторане удобное зонирование на 3 зала, позволяющее проводить любые мероприятия – семейные торжества, деловые встречи, камерные свадьбы и детские праздники.
+                p.place__text Площадки: 3 зала, из которых 1 – проходной. Для мероприятий используются 2-й и банкетный зал, но есть возможность закрыть для события и весь ресторан
+                a.place__link(href="#") Сайт ресторана
+                  svg(width='11' height='8' viewbox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z' fill='#F5F0ED')
+              .place__slider.swiper.js-sliderPlace 
+                .swiper-wrapper
+                  each slide in [1, 2, 3, 4, 5]
+                    .swiper-slide
+                      img.place__foto(src="img/compress/place-slide-1.webp", alt="@")
+                .swiper-pagination
+                button.swiper-btn.swiper-btn-next
+                  img(src="img/svg/icon-format-arrow-right.svg", alt="@")
+                button.swiper-btn.swiper-btn-prev
+                  img(src="img/svg/icon-format-arrow-left.svg", alt="@")

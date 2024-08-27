@@ -50,6 +50,11 @@ html{
 		overflow: hidden;
 	}
 }
+
+html.modalOpened {
+  font-size: 16px;
+}
+
 body{
 	padding-top: 19rem;
 	font-family: $font-1;

@@ -13,4 +13,8 @@ section.catalog#catalog
             a(href=`img/compress/catalog-slide-${item}.webp` data-fancybox="gallery")
               img.catalog__foto(src=`img/compress/catalog-slide-${item}.webp`, alt="foto") 
       .swiper-pagination
-  a.catalog__download(href="#" download) скачать каталог 
+  .catalog__downloads
+    h6.catalog__downloadstitle Скачать каталог
+    .catalog__downloadsbox
+      a.catalog__download(href="https://catering.shalyapinspb.ru/files/furshet_catalog_dachnyi.pdf" target="_blank") дачный ресторан
+      a.catalog__download(href="img/furshet_catalog-gorod.pdf" target="_blank") городской ресторан

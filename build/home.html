@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="based" lang="ru">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="img/original/favicon-16x16.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/banket-form.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <title>Shalyapin </title>
   </head>
@@ -17,21 +18,31 @@
           <div class="header__contacts"><a class="header__val" href="mailto:banket@shalyapinspb.ru">banket@shalyapinspb.ru</a><a class="header__val" href="tel:+78124457852">+7 (812) 445-78-52</a></div><img class="header__logo" src="img/svg/logo.svg" alt="@"/>
           <div class="header__actions">
             <div class="header-select">
-              <div class="header-select__curr"><span class="header__val">Банкеты & Кейтеринг</span><img class="header__iconarrow" src="img/svg/icon-header-arrow-down.svg" alt="@"/></div>
-            </div><a class="header__val" href="#"> EN</a>
+              <div class="header-select__curr js-selectFormatsToggle" onclick="this.classList.toggle('is-open')"><span class="header__val">Банкеты & Кейтеринг</span><img class="header__iconarrow" src="img/svg/icon-header-arrow-down.svg" alt="@"/></div>
+              <div class="header-select__sub"><a class="header-select__link" href="https://dachniy.shalyapinspb.ru/">Дачный Шаляпин</a><a class="header-select__link" href="https://gorodskoy.shalyapinspb.ru/">Городской Шаляпин</a></div>
+            </div>
+            <!-- a.header__val(href="#")  EN-->
           </div>
           <button class="header__mmenubtn js-mMenuToggle"></button>
         </div>
         <nav class="menu"> 
           <ul class="menu__list"> 
-            <li class="menu__item"> <a class="menu__link" href="#formats">Услуги</a></li>
-            <li class="menu__item"> <a class="menu__link" href="#catalog">Меню</a></li>
-            <li class="menu__item"> <a class="menu__link" href="#places">Площадки</a></li>
-            <li class="menu__item"> <a class="menu__link" href="#case">Проведенные мероприятия</a></li>
-            <li class="menu__item"> <a class="menu__link" href="#contacts">Контакты</a></li>
+            <li class="menu__item"> <a class="menu__link" href="#formats">Услуги</a>
+            </li>
+            <li class="menu__item"> <a class="menu__link" href="#catalog">Меню</a>
+            </li>
+            <li class="menu__item"> <a class="menu__link" href="#places">Площадки</a>
+            </li>
+            <li class="menu__item"> <a class="menu__link" href="#case">Проведенные мероприятия</a>
+            </li>
+            <li class="menu__item"> <span class="menu__link" onclick="window.openShalyapinModalForm()">Просчитать мероприятие</span>
+            </li>
+            <li class="menu__item"> <a class="menu__link" href="#contacts">Контакты</a>
+            </li>
           </ul>
           <div class="header-select menu__select">
-            <div class="header-select__curr"><span class="header__val">Банкеты & Кейтеринг</span><img class="header__iconarrow" src="img/svg/icon-header-arrow-down.svg" alt="@"/></div>
+            <div class="header-select__curr js-selectFormatsToggle" onclick="this.classList.toggle('is-open')"><span class="header__val">Банкеты & Кейтеринг</span><img class="header__iconarrow" src="img/svg/icon-header-arrow-down.svg" alt="@"/></div>
+            <div class="header-select__sub"><a class="header-select__link" href="https://dachniy.shalyapinspb.ru/">Дачный Шаляпин</a><a class="header-select__link" href="https://gorodskoy.shalyapinspb.ru/">Городской Шаляпин</a></div>
           </div><a class="header__val menu__email" href="mailto:banket@shalyapinspb.ru">banket@shalyapinspb.ru</a><a class="header__val menu__phone" href="tel:+78124457852">+7 (812) 445-78-52</a>
         </nav>
       </div>
@@ -65,29 +76,29 @@
         <div class="about__box"> 
           <div class="about__item about__item--menu"><img class="about__icon about__icon--menu" src="img/compress/about-1.webp" alt="@"/>
             <h6 class="about__name">Меню</h6>
-            <p class="about__text">Гибкое меню по выбору заказчика. Любая кухня. Специальные предложения. Блюда по рецепту клиента. Любые формы – от фуршета до застолья.</p>
+            <p class="about__text">Выбор из большого количества видов меню, привлекательные варианты для самых разных вкусов и бюджетов. Мы готовим блюда всех стран мира, а также блюда по индивидуальным рецептам гостей. </p>
           </div>
           <div class="about__item about__item--team"><img class="about__icon about__icon--team" src="img/compress/about-2.webp" alt="@"/>
             <h6 class="about__name">Команда</h6>
-            <p class="about__text">Опытный постоянный персонал со стажем. Регулярное тестирование и аттестация команды. Компетентность. Деликатность. Приватность.</p>
+            <p class="about__text">Наш персонал — высококвалифицированная команда с большим опытом работы. Все работники проходят регулярное тестирование и аттестацию. Компетентность, деликатность, приватность —  формула, которой придерживается каждый сотрудник кейтеринг-команды «Шаляпин».</p>
           </div>
           <div class="about__item about__item--info">
-            <p class="about__info">Ресторан на природе, ресторан у вас дома, ресторан в офисе, ресторан на международном симпозиуме или на стадионе – у «Шаляпина» многолетний опыт организации любых форм выездного ресторанного обслуживания. Преимущества кейтеринга – в индивидуальном подходе к пожеланиям заказчика, вариативность меню в зависимости от вкусови бюджета клиента, возможность организации мероприятия под ключ по принципу «ресторан – там, где вы».</p>
+            <p class="about__info">Ресторан на природе, ресторан у вас дома, ресторан в офисе, ресторан на международном симпозиуме или на стадионе – у «Шаляпина» многолетний опыт организации любых форм выездного ресторанного обслуживания. </p>
           </div>
           <div class="about__item about__item--slogan">
             <h6 class="about__slogan">«ресторан – <br/> там, <br/> где вы»</h6>
           </div>
           <div class="about__item about__item--size"><img class="about__icon about__icon--size" src="img/compress/about-3.webp" alt="@"/>
             <h6 class="about__name">Масштаб</h6>
-            <p class="about__text">Большой опыт мероприятий любого формата и масштаба – от детского праздника до приема на 1500 персон.</p>
+            <p class="about__text">Масштабные мероприятия — наша сильная сторона. У нас большой опыт организации мероприятий любого формата таких как - кубок конфедераций 2017, евро 2020, концерты крупных европейских исполнителей на Газпром арене. </p>
           </div>
           <div class="about__item about__item--turnkey"><img class="about__icon about__icon--turnkey" src="img/compress/about-4.webp" alt="@"/>
             <h6 class="about__name">Под ключ</h6>
-            <p class="about__text">Организация мероприятий под ключ – от мебели до музыки. Поиск декораторов, диджеев, конферансье, музыкантов, артистов и клоунов</p>
+            <p class="about__text">Организация «под ключ» — мы подберем все необходимое для мероприятия, от мебели до музыки. Берем на себя все, поиск ведущих, декораторов, диджеев, музыкантов, артистов и аниматоров. </p>
           </div>
           <div class="about__item about__item--geo"><img class="about__icon about__icon--geo" src="img/compress/about-5.webp" alt="@"/>
             <h6 class="about__name">География</h6>
-            <p class="about__text">Любая локация в Санкт-Петербургеи Ленинградской области, в любом помещении и на свежем воздухе. Возможен выезд и в другие города России.</p>
+            <p class="about__text">Любая локация в Санкт-Петербурге и Ленинградской области. Возможен выезд и в другие города и страны. </p>
           </div>
         </div>
       </div>
@@ -98,50 +109,48 @@
           <h2 class="title title-white formats__title">Форматы <br/> кейтеринга</h2>
         </div>
         <div class="swiper formats__slider js-sliderFormat"> 
-          <div class="swiper-wrapper"> 
+          <div class="swiper-wrapper">
             <div class="swiper-slide"> 
               <div class="format"><img class="format__foto1" src="img/compress/format-slide-1.webp" alt="@"/>
                 <div class="format__info">
                   <h6 class="format__title">Свадебные торжества</h6>
-                  <p class="format__text">Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы ваш праздник прошёл незабываемо, а вам, при этом, не пришлось ни о чём беспокоиться.</p>
-                  <p class="format__text">Банкетный менеджер поможет вам определиться с наилучшим вариантом накрытия, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом ваших вкусов и пожеланий. Мы предлагаем широкий выбор блюд русской и европейской кухни под различные ценовые категории и форматы. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус</p>
+                  <p class="format__text">Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман и организован: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы праздник прошёл незабываемо и Вам не пришлось ни о чём беспокоиться.</p>
+                  <p class="format__text">Банкетный менеджер поможет определиться с наилучшим вариантом сервировки, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом Ваших вкусов и пожеланий. </p>
+                  <p class="format__text">Мы предлагаем широкий выбор блюд и работаем с  различными ценовыми категориями и форматами. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус.</p>
                 </div><img class="format__foto2" src="img/compress/format-slide-2.webp" alt="@"/>
               </div>
             </div>
             <div class="swiper-slide"> 
-              <div class="format"><img class="format__foto1" src="img/compress/format-slide-1.webp" alt="@"/>
+              <div class="format"><img class="format__foto1" src="img/original/format-slide-3.jpg" alt="@"/>
                 <div class="format__info">
-                  <h6 class="format__title">Свадебные торжества</h6>
-                  <p class="format__text">Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы ваш праздник прошёл незабываемо, а вам, при этом, не пришлось ни о чём беспокоиться.</p>
-                  <p class="format__text">Банкетный менеджер поможет вам определиться с наилучшим вариантом накрытия, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом ваших вкусов и пожеланий. Мы предлагаем широкий выбор блюд русской и европейской кухни под различные ценовые категории и форматы. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус</p>
-                </div><img class="format__foto2" src="img/compress/format-slide-2.webp" alt="@"/>
+                  <h6 class="format__title">Дни рождения и юбилеи</h6>
+                  <p class="format__text">Отметить день рождения в кругу близких и друзей — добрая традиция. Мы ценим традиции и будем рады устроить незабываемый праздник, в котором учтём все Ваши пожелания. Мы поможем подобрать площадку под желаемый формат празднования — будь то банкет или частная закрытая вечеринка с приглашенными артистами. Составим для вас индивидуальное меню и обеспечим первоклассный сервис, чтобы Ваши гости могли наслаждаться праздником и ни о чём не беспокоиться.</p>
+                  <p class="format__text">Для именинников наши кондитеры приготовят праздничный торт.</p>
+                </div><img class="format__foto2" src="img/original/format-slide-4.jpg" alt="@"/>
               </div>
             </div>
             <div class="swiper-slide"> 
-              <div class="format"><img class="format__foto1" src="img/compress/format-slide-1.webp" alt="@"/>
+              <div class="format"><img class="format__foto1" src="img/original/format-slide-5.jpg" alt="@"/>
                 <div class="format__info">
-                  <h6 class="format__title">Свадебные торжества</h6>
-                  <p class="format__text">Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы ваш праздник прошёл незабываемо, а вам, при этом, не пришлось ни о чём беспокоиться.</p>
-                  <p class="format__text">Банкетный менеджер поможет вам определиться с наилучшим вариантом накрытия, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом ваших вкусов и пожеланий. Мы предлагаем широкий выбор блюд русской и европейской кухни под различные ценовые категории и форматы. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус</p>
-                </div><img class="format__foto2" src="img/compress/format-slide-2.webp" alt="@"/>
+                  <h6 class="format__title">Детские праздники</h6>
+                  <p class="format__text">Организовать праздник для маленьких гостей — особенно ответственная задача, ведь этот день должен быть похож на сказку. <br/> Мы возьмем на себя заботы о празднике: подберём подходящую площадку, позаботимся об увлекательной программе, оформлении зала, развлечениях для гостей и, конечно же, о разнообразном и вкусном меню. По Вашим пожеланиям мы подберем самые полезные и вкусные блюда и организуем сладкий стол с угощениями ручной работы.</p>
+                </div><img class="format__foto2" src="img/original/format-slide-6.jpg" alt="@"/>
               </div>
             </div>
             <div class="swiper-slide"> 
-              <div class="format"><img class="format__foto1" src="img/compress/format-slide-1.webp" alt="@"/>
+              <div class="format"><img class="format__foto1" src="img/original/format-slide-7.jpg" alt="@"/>
                 <div class="format__info">
-                  <h6 class="format__title">Свадебные торжества</h6>
-                  <p class="format__text">Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы ваш праздник прошёл незабываемо, а вам, при этом, не пришлось ни о чём беспокоиться.</p>
-                  <p class="format__text">Банкетный менеджер поможет вам определиться с наилучшим вариантом накрытия, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом ваших вкусов и пожеланий. Мы предлагаем широкий выбор блюд русской и европейской кухни под различные ценовые категории и форматы. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус</p>
-                </div><img class="format__foto2" src="img/compress/format-slide-2.webp" alt="@"/>
+                  <h6 class="format__title">Корпоративные мероприятия</h6>
+                  <p class="format__text">Корпоративный поход в ресторан или выезд загород — мы поможем вам провести мероприятие вкусно и весело! Подготовим индивидуальное меню под Ваш бюджет, организуем декор, пригласим ведущего и фотографа — словом, сделаем всё, чтобы Ваш праздник прошёл на отлично и оставил добрые воспоминания у коллег.</p>
+                </div><img class="format__foto2" src="img/original/format-slide-8.jpg" alt="@"/>
               </div>
             </div>
             <div class="swiper-slide"> 
-              <div class="format"><img class="format__foto1" src="img/compress/format-slide-1.webp" alt="@"/>
+              <div class="format"><img class="format__foto1" src="img/original/format-slide-9.jpg" alt="@"/>
                 <div class="format__info">
-                  <h6 class="format__title">Свадебные торжества</h6>
-                  <p class="format__text">Свадьба — грандиозное событие, каждый элемент которого должен быть хорошо продуман: от идеального фасона платья до безукоризненного праздничного стола. Мы умеем делать всё для того, чтобы ваш праздник прошёл незабываемо, а вам, при этом, не пришлось ни о чём беспокоиться.</p>
-                  <p class="format__text">Банкетный менеджер поможет вам определиться с наилучшим вариантом накрытия, учтёт пожелания по оформлению, сопровождению и декору, а опытная ресторанная команда составит меню с учётом ваших вкусов и пожеланий. Мы предлагаем широкий выбор блюд русской и европейской кухни под различные ценовые категории и форматы. Для эффектного завершения торжества наши кондитеры испекут торт вашей мечты с тематическим декором на любой вкус</p>
-                </div><img class="format__foto2" src="img/compress/format-slide-2.webp" alt="@"/>
+                  <h6 class="format__title">Бизнес-мероприятия</h6>
+                  <p class="format__text">Деловые мероприятия требуют идеального сервиса и выверенного тайминга. Мы поможем организовать бизнес-мероприятие на высочайшем уровне. Обеспечим ненавязчивый и качественный сервис, соответствующее случаю меню и подходящую обстановку, будь то презентация ежегодного отчета или деловые переговоры.</p>
+                </div><img class="format__foto2" src="img/original/format-slide-10.jpg" alt="@"/>
               </div>
             </div>
           </div>
@@ -151,8 +160,8 @@
             <button class="formats__navbtn formats__navbtn--next"><img src="img/svg/icon-format-arrow-right.svg" alt="@"/></button>
           </div>
         </div>
-        <button class="formats__button js-openModal" data-src="#modal">Связаться с менеджером</button>
       </div>
+      <button class="formats__button connect js-openModal" data-src="#modal">Связаться с менеджером</button>
     </section>
     <div class="modal" id="modal"><img class="modal__close js-closeModal" src="img/svg/icon-modal-button-close.svg" alt="close"/>
       <div class="order-form"> 
@@ -192,7 +201,11 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </div><a class="catalog__download" href="#" download="download">скачать каталог </a>
+      </div>
+      <div class="catalog__downloads">
+        <h6 class="catalog__downloadstitle">Скачать каталог</h6>
+        <div class="catalog__downloadsbox"><a class="catalog__download" href="https://catering.shalyapinspb.ru/files/furshet_catalog_dachnyi.pdf" target="_blank">дачный ресторан</a><a class="catalog__download" href="img/furshet_catalog-gorod.pdf" target="_blank">городской ресторан</a></div>
+      </div>
     </section>
     <section class="places" id="places">
       <div class="container">
@@ -205,35 +218,34 @@
               <h6 class="place__name">Городской «Шаляпин»</h6><span class="place__iconbox"> <img class="place__icon" src="img/svg/icon-accordeon-arrow.svg" alt="@"/></span>
             </div>
             <div class="place__body"> 
-              <div class="place__inner"> 
+              <div class="place__inner">
                 <div class="place__info"> 
                   <div class="place__infobox"> <span class="place__infoname">Банкентный зал</span>
-                    <ul class="place__infolist"> 
+                    <ul class="place__infolist">
                       <li class="place__infoval">Банкет до 30 гостей</li>
                       <li class="place__infoval">Фуршет до 40 гостей</li>
                     </ul>
                   </div>
-                  <div class="place__infobox"><span class="place__infoname">II зал</span>
-                    <ul class="place__infolist"> 
+                  <div class="place__infobox"> <span class="place__infoname">II зал</span>
+                    <ul class="place__infolist">
                       <li class="place__infoval">Банкет до 50 гостей</li>
                       <li class="place__infoval">Фуршет до 60 гостей</li>
                     </ul>
                   </div>
                 </div>
                 <div class="place__content"> 
-                  <p class="place__text">Элегантный ресторан в стиле петербургской квартиры начала ХХ века. В меню – традиционная русская кухня в современном прочтении и популярные европейские блюда. Для больших компаний разработаны специальные праздничные предложения — баранья нога, стерлядь горячего копчения, запеченная утка с яблоками. Кондитеры ресторана славятся шоколадными конфетами ручной работы и оригинальными тортами. В ресторане удобное зонирование на 3 зала, позволяющее проводить любые мероприятия – семейные торжества, деловые встречи, камерные свадьбы и детские праздники.</p>
-                  <p class="place__text">Площадки: 3 зала, из которых 1 – проходной. Для мероприятий используются 2-й и банкетный зал, но есть возможность закрыть для события и весь ресторан</p><a class="place__link" href="#">Сайт ресторана
+                  <p class="place__text">Элегантный ресторан в стиле петербургской квартиры начала ХХ века. В меню – традиционная русская кухня в современном прочтении и популярные европейские блюда. Специальные праздничные предложения — баранья нога, стерлядь горячего копчения, запеченная утка с яблоками. Кондитеры ресторана славятся шоколадными конфетами ручной работы и оригинальными тортами. В ресторане удобное зонирование на 3 зала, позволяющее проводить любые мероприятия – семейные торжества, деловые встречи, камерные свадьбы и детские праздники.</p><a class="place__link" href="https://gorodskoy.shalyapinspb.ru/">Сайт ресторана
                     <svg width="11" height="8" viewbox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#F5F0ED"></path>
                     </svg></a>
                 </div>
                 <div class="place__slider swiper js-sliderPlace"> 
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-gorod-1.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-gorod-2.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-gorod-3.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-gorod-4.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-gorod-5.jpg" alt="@"/></div>
                   </div>
                   <div class="swiper-pagination"></div>
                   <button class="swiper-btn swiper-btn-next"><img src="img/svg/icon-format-arrow-right.svg" alt="@"/></button>
@@ -247,35 +259,36 @@
               <h6 class="place__name">Дачный «Шаляпин»</h6><span class="place__iconbox"> <img class="place__icon" src="img/svg/icon-accordeon-arrow.svg" alt="@"/></span>
             </div>
             <div class="place__body"> 
-              <div class="place__inner"> 
+              <div class="place__inner">
                 <div class="place__info"> 
-                  <div class="place__infobox"> <span class="place__infoname">Банкентный зал</span>
-                    <ul class="place__infolist"> 
-                      <li class="place__infoval">Банкет до 30 гостей</li>
-                      <li class="place__infoval">Фуршет до 40 гостей</li>
+                  <div class="place__infobox"> <span class="place__infoname">Банкетный зал</span>
+                    <ul class="place__infolist">
+                      <li class="place__infoval">Банкет до 40 гостей</li>
+                      <li class="place__infoval">Фуршет до 50 гостей</li>
                     </ul>
                   </div>
-                  <div class="place__infobox"><span class="place__infoname">II зал</span>
-                    <ul class="place__infolist"> 
-                      <li class="place__infoval">Банкет до 50 гостей</li>
-                      <li class="place__infoval">Фуршет до 60 гостей</li>
+                  <div class="place__infobox"> <span class="place__infoname">Каминный зал</span>
+                    <ul class="place__infolist">
+                      <li class="place__infoval">Банкет до 120 человек</li>
+                      <li class="place__infoval">Фуршет до 200 человек</li>
+                    </ul>
+                  </div>
+                  <div class="place__infobox"> <span class="place__infoname">Летняя терраса</span>
+                    <ul class="place__infolist">
+                      <li class="place__infoval">Банкет до 80 человек</li>
+                      <li class="place__infoval">Фуршет до 130 человек</li>
                     </ul>
                   </div>
                 </div>
                 <div class="place__content"> 
-                  <p class="place__text">Элегантный ресторан в стиле петербургской квартиры начала ХХ века. В меню – традиционная русская кухня в современном прочтении и популярные европейские блюда. Для больших компаний разработаны специальные праздничные предложения — баранья нога, стерлядь горячего копчения, запеченная утка с яблоками. Кондитеры ресторана славятся шоколадными конфетами ручной работы и оригинальными тортами. В ресторане удобное зонирование на 3 зала, позволяющее проводить любые мероприятия – семейные торжества, деловые встречи, камерные свадьбы и детские праздники.</p>
-                  <p class="place__text">Площадки: 3 зала, из которых 1 – проходной. Для мероприятий используются 2-й и банкетный зал, но есть возможность закрыть для события и весь ресторан</p><a class="place__link" href="#">Сайт ресторана
+                  <p class="place__text">Ресторан «Шаляпин» в Репино — идеальное место для мероприятий любого формата — корпоративов, юбилеев и свадеб. Популярные блюда современной русской и европейской кухонь – отличное сопровождение любого события, как и специальные праздничные блюда. В ресторане 2 зала с оригинальными авторскими «живыми» каминами, а в летний сезон на просторной террасе, можно провести выездную свадебную регистрацию или любой другой праздник — от мальчишника до детского дня рождения.</p><a class="place__link" href="https://dachniy.shalyapinspb.ru/">Сайт ресторана
                     <svg width="11" height="8" viewbox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#F5F0ED"></path>
                     </svg></a>
                 </div>
                 <div class="place__slider swiper js-sliderPlace"> 
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-dachniy.jpg" alt="@"/></div>
                   </div>
                   <div class="swiper-pagination"></div>
                   <button class="swiper-btn swiper-btn-next"><img src="img/svg/icon-format-arrow-right.svg" alt="@"/></button>
@@ -289,35 +302,30 @@
               <h6 class="place__name">Ресторан «Арка»</h6><span class="place__iconbox"> <img class="place__icon" src="img/svg/icon-accordeon-arrow.svg" alt="@"/></span>
             </div>
             <div class="place__body"> 
-              <div class="place__inner"> 
+              <div class="place__inner">
                 <div class="place__info"> 
-                  <div class="place__infobox"> <span class="place__infoname">Банкентный зал</span>
-                    <ul class="place__infolist"> 
-                      <li class="place__infoval">Банкет до 30 гостей</li>
-                      <li class="place__infoval">Фуршет до 40 гостей</li>
+                  <div class="place__infobox"> <span class="place__infoname">1 этаж с контактной <br> барной стойкой</span>
+                    <ul class="place__infolist">
+                      <li class="place__infoval">Фуршет до 60 гостей</li>
                     </ul>
                   </div>
-                  <div class="place__infobox"><span class="place__infoname">II зал</span>
-                    <ul class="place__infolist"> 
-                      <li class="place__infoval">Банкет до 50 гостей</li>
-                      <li class="place__infoval">Фуршет до 60 гостей</li>
+                  <div class="place__infobox"> <span class="place__infoname">2 этаж</span>
+                    <ul class="place__infolist">
+                      <li class="place__infoval">Ужин до 30 гостей</li>
+                      <li class="place__infoval">Фуршет до 50 гостей</li>
                     </ul>
                   </div>
                 </div>
                 <div class="place__content"> 
-                  <p class="place__text">Элегантный ресторан в стиле петербургской квартиры начала ХХ века. В меню – традиционная русская кухня в современном прочтении и популярные европейские блюда. Для больших компаний разработаны специальные праздничные предложения — баранья нога, стерлядь горячего копчения, запеченная утка с яблоками. Кондитеры ресторана славятся шоколадными конфетами ручной работы и оригинальными тортами. В ресторане удобное зонирование на 3 зала, позволяющее проводить любые мероприятия – семейные торжества, деловые встречи, камерные свадьбы и детские праздники.</p>
-                  <p class="place__text">Площадки: 3 зала, из которых 1 – проходной. Для мероприятий используются 2-й и банкетный зал, но есть возможность закрыть для события и весь ресторан</p><a class="place__link" href="#">Сайт ресторана
-                    <svg width="11" height="8" viewbox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#F5F0ED"></path>
-                    </svg></a>
+                  <p class="place__text">Двухэтажный стильный рестобар с авторскими коктейлями, модной кухней и яркими вечеринками. В интерьере три контактные барные стойки, танцпол и «тихий» второй этаж со стеклянной крышей и приглушенным светом. <br> В меню широкий выбор коктейлей, легких закусок и горячих блюд европейской кухни. Идеальное место для закрытых вечеринок, корпоративов, свадеб и других событий в любом формате – фуршет, ужин «с рассадкой», вечеринка с open bar и диджеем. <br> Арка room - кабинет-гримерка Аркадия Райкина. Современный дизайн, лаконично переплетен с историческими архитектурными элементами.</p>
+                  <button class="connect js-openModal" data-src="#modal">Связаться с менеджером</button>
                 </div>
                 <div class="place__slider swiper js-sliderPlace"> 
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-arka-1.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-arka-2.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-arka-3.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-arka-4.jpg" alt="@"/></div>
                   </div>
                   <div class="swiper-pagination"></div>
                   <button class="swiper-btn swiper-btn-next"><img src="img/svg/icon-format-arrow-right.svg" alt="@"/></button>
@@ -331,35 +339,17 @@
               <h6 class="place__name">Другие площадки</h6><span class="place__iconbox"> <img class="place__icon" src="img/svg/icon-accordeon-arrow.svg" alt="@"/></span>
             </div>
             <div class="place__body"> 
-              <div class="place__inner"> 
-                <div class="place__info"> 
-                  <div class="place__infobox"> <span class="place__infoname">Банкентный зал</span>
-                    <ul class="place__infolist"> 
-                      <li class="place__infoval">Банкет до 30 гостей</li>
-                      <li class="place__infoval">Фуршет до 40 гостей</li>
-                    </ul>
-                  </div>
-                  <div class="place__infobox"><span class="place__infoname">II зал</span>
-                    <ul class="place__infolist"> 
-                      <li class="place__infoval">Банкет до 50 гостей</li>
-                      <li class="place__infoval">Фуршет до 60 гостей</li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="place__inner">
                 <div class="place__content"> 
-                  <p class="place__text">Элегантный ресторан в стиле петербургской квартиры начала ХХ века. В меню – традиционная русская кухня в современном прочтении и популярные европейские блюда. Для больших компаний разработаны специальные праздничные предложения — баранья нога, стерлядь горячего копчения, запеченная утка с яблоками. Кондитеры ресторана славятся шоколадными конфетами ручной работы и оригинальными тортами. В ресторане удобное зонирование на 3 зала, позволяющее проводить любые мероприятия – семейные торжества, деловые встречи, камерные свадьбы и детские праздники.</p>
-                  <p class="place__text">Площадки: 3 зала, из которых 1 – проходной. Для мероприятий используются 2-й и банкетный зал, но есть возможность закрыть для события и весь ресторан</p><a class="place__link" href="#">Сайт ресторана
-                    <svg width="11" height="8" viewbox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#F5F0ED"></path>
-                    </svg></a>
+                  <p class="place__text">Если хотите провести мероприятие в особенном месте вне ресторанных стен, команда «Шаляпина» всё организует! Свадьба в загородном доме, корпоратив на берегу Финского залива, вечеринка в оранжерее, выпускной вечер во дворце – расскажите о желаемом месте проведения или доверьте выбор площадки нашей службе кейтеринга. <br> Команда создаст идеальный праздник как в уютной петербургской квартире, так и на больших городских площадках. У нас в запасе много уникальных мест для проведения мероприятий любого формата, которые приятно удивят Вас и Ваших гостей!</p>
+                  <button class="connect js-openModal" data-src="#modal">Связаться с менеджером</button>
                 </div>
                 <div class="place__slider swiper js-sliderPlace"> 
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
-                    <div class="swiper-slide"><img class="place__foto" src="img/compress/place-slide-1.webp" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-another-1.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-another-2.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-another-3.jpg" alt="@"/></div>
+                    <div class="swiper-slide"><img class="place__foto" src="img/original/place-another-4.jpg" alt="@"/></div>
                   </div>
                   <div class="swiper-pagination"></div>
                   <button class="swiper-btn swiper-btn-next"><img src="img/svg/icon-format-arrow-right.svg" alt="@"/></button>
@@ -379,22 +369,22 @@
         <div class="cases__slider swiper js-sliderCases"> 
           <div class="swiper-wrapper"> 
             <div class="swiper-slide"> 
-              <div class="case"> <a href="img/compress/keys-slide-2.webp" data-fancybox="cases"><img class="case__foto" src="img/compress/keys-slide-2.webp" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
+              <div class="case"> <a href="img/original/keys-1.jpg" data-fancybox="cases"><img class="case__foto" src="img/original/keys-1.jpg" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
             </div>
             <div class="swiper-slide"> 
-              <div class="case"> <a href="img/compress/keys-slide-3.webp" data-fancybox="cases"><img class="case__foto" src="img/compress/keys-slide-3.webp" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
+              <div class="case"> <a href="img/original/keys-2.jpg" data-fancybox="cases"><img class="case__foto" src="img/original/keys-2.jpg" alt="@"/></a><span class="case__name">Матчи ФК «Зенит» на стадионе «Газпром-Арена» более 5 лет</span></div>
             </div>
             <div class="swiper-slide"> 
-              <div class="case"> <a href="img/compress/keys-slide-1.webp" data-fancybox="cases"><img class="case__foto" src="img/compress/keys-slide-1.webp" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
+              <div class="case"> <a href="img/original/keys-3.jpg" data-fancybox="cases"><img class="case__foto" src="img/original/keys-3.jpg" alt="@"/></a><span class="case__name">Открытие выставки NatGeo</span></div>
             </div>
             <div class="swiper-slide"> 
-              <div class="case"> <a href="img/compress/keys-slide-3.webp" data-fancybox="cases"><img class="case__foto" src="img/compress/keys-slide-3.webp" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
+              <div class="case"> <a href="img/original/keys-4.jpg" data-fancybox="cases"><img class="case__foto" src="img/original/keys-4.jpg" alt="@"/></a><span class="case__name">Мероприятие фонда Дети бабочки</span></div>
             </div>
             <div class="swiper-slide"> 
-              <div class="case"> <a href="img/compress/keys-slide-2.webp" data-fancybox="cases"><img class="case__foto" src="img/compress/keys-slide-2.webp" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
+              <div class="case"> <a href="img/original/keys-5.jpg" data-fancybox="cases"><img class="case__foto" src="img/original/keys-5.jpg" alt="@"/></a><span class="case__name">Концерт группировки ЛЕНИНГРАД</span></div>
             </div>
             <div class="swiper-slide"> 
-              <div class="case"> <a href="img/compress/keys-slide-1.webp" data-fancybox="cases"><img class="case__foto" src="img/compress/keys-slide-1.webp" alt="@"/></a><span class="case__name">Открытие музея Фаберже</span></div>
+              <div class="case"> <a href="img/original/keys-6.jpg" data-fancybox="cases"><img class="case__foto" src="img/original/keys-6.jpg" alt="@"/></a><span class="case__name">Концерт группы БИ-2</span></div>
             </div>
           </div>
           <div class="cases__nav">
@@ -416,6 +406,7 @@
         </form>
       </div>
       <div class="social"> <a href="#"><img class="social__icon" src="img/svg/icon-phone.svg" alt="@"/></a><a href="#"><img class="social__icon" src="img/svg/icon-vk.svg" alt="@"/></a><a href="#"><img class="social__icon" src="img/svg/icon-whatsapp.svg" alt="@"/></a></div>
+      <button class="open-calc" onclick="window.openShalyapinModalForm()">Просчитать мероприятие</button>
     </section>
     <footer class="footer">
       <div class="container"> 
@@ -425,12 +416,14 @@
         </div>
       </div>
     </footer>
+    <div id="modalFormContainer"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="js/banket-form.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

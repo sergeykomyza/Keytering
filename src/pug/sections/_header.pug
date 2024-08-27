@@ -6,6 +6,7 @@ include ./../mixins/_mixin.pug
     {link: 'Меню', href: '#catalog'},
     {link: 'Площадки', href: '#places'},
     {link: 'Проведенные мероприятия', href: '#case'},
+    {link: 'Просчитать мероприятие'},
     {link: 'Контакты', href: '#contacts'}
   ]
 
@@ -20,19 +21,28 @@ header.header
       img.header__logo(src="img/svg/logo.svg", alt="@")
       .header__actions
         .header-select
-          .header-select__curr
+          .header-select__curr.js-selectFormatsToggle(onclick="this.classList.toggle('is-open')")
             span.header__val Банкеты & Кейтеринг
             img.header__iconarrow(src="img/svg/icon-header-arrow-down.svg", alt="@")
-        a.header__val(href="#")  EN
+          .header-select__sub
+            a.header-select__link(href="https://dachniy.shalyapinspb.ru/") Дачный Шаляпин
+            a.header-select__link(href="https://gorodskoy.shalyapinspb.ru/") Городской Шаляпин
+        // a.header__val(href="#")  EN
       button.header__mmenubtn.js-mMenuToggle
     nav.menu 
       ul.menu__list 
-        each item in menu 
+        each item, i in menu 
           li.menu__item 
-            a.menu__link(href=`${item.href}`)= item.link 
+            if(i == 4)
+              span.menu__link(onclick="window.openShalyapinModalForm()")= item.link
+            else
+              a.menu__link(href=`${item.href}`)= item.link 
       .header-select.menu__select
-        .header-select__curr
+        .header-select__curr.js-selectFormatsToggle(onclick="this.classList.toggle('is-open')")
           span.header__val Банкеты & Кейтеринг
           img.header__iconarrow(src="img/svg/icon-header-arrow-down.svg", alt="@")
+        .header-select__sub
+          a.header-select__link(href="https://dachniy.shalyapinspb.ru/") Дачный Шаляпин
+          a.header-select__link(href="https://gorodskoy.shalyapinspb.ru/") Городской Шаляпин
       a.header__val.menu__email(href="mailto:banket@shalyapinspb.ru") banket@shalyapinspb.ru
       a.header__val.menu__phone(href="tel:+78124457852") +7 (812) 445-78-52

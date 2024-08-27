@@ -61,6 +61,7 @@ const inputMask = () => {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const sliders = () => {
     const swiper = new Swiper('.js-sliderFormat', {
+        autoHeight: true,
         pagination: {
             el: ".formats__pagination",
             clickable: true,
@@ -102,7 +103,16 @@ const sliders = () => {
         }
     })
     const swiper4 = new Swiper('.js-sliderPlace', {
-        effect: "cube",
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+            shadow: true,
+            translate: ["-20%", 0, -1],
+            },
+            next: {
+            translate: ["100%", 0, 0],
+            },
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true
@@ -194,21 +204,21 @@ const accordeons = (box, item, header, content, openedClass, closedClass) => {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GSAP
-function GsapAnimationScrubSections(animationElem, animationTrigger) {
-    let distance = document.documentElement.clientWidth > 768 ? 800 : 300
-    gsap.from(animationElem, {
-        y: 200,
-        scrollTrigger: {
-            pin: false,
-            trigger: animationTrigger,
-            start: "top bottom",
-            end: `+=${distance}`,
-            scrub: 2,
-            markers: false,
-            id: '1'
-        }
-    });
-}
+// function GsapAnimationScrubSections(animationElem, animationTrigger) {
+//     let distance = document.documentElement.clientWidth > 768 ? 800 : 100
+//     gsap.from(animationElem, {
+//         y: 200,
+//         scrollTrigger: {
+//             pin: false,
+//             trigger: animationTrigger,
+//             start: "top bottom",
+//             end: `+=${distance}`,
+//             scrub: 1,
+//             markers: false,
+//             id: '1'
+//         }
+//     });
+// }
 function GsapAnimationTitles(animationElem, animationTrigger) {
     gsap.from(animationElem, {
         y: -200,
@@ -219,7 +229,7 @@ function GsapAnimationTitles(animationElem, animationTrigger) {
             end: " 300px bottom",
             scrub: false,
             markers: false,
-            toggleActions: "play none resume reverse",
+            // toggleActions: "play none resume reverse",
             id: '1'
         }
     });
@@ -231,16 +241,17 @@ inputMask()
 sliders()
 modal()
 accordeons('.places', '.place', '.place__head', '.place__body', 'place opened', 'place closed');
-GsapAnimationScrubSections('.about', '.about')
-GsapAnimationScrubSections('.formats .container', '.formats')
-GsapAnimationScrubSections('.catalog', '.catalog')
-GsapAnimationScrubSections('.places .container', '.places')
-GsapAnimationScrubSections('.cases', '.cases')
-GsapAnimationScrubSections('#contacts', '#contacts')
+// GsapAnimationScrubSections('.about', '.about')
+// GsapAnimationScrubSections('.formats .container', '.formats')
+// GsapAnimationScrubSections('.catalog', '.catalog')
+// GsapAnimationScrubSections('.places .container', '.places')
+// GsapAnimationScrubSections('.cases', '.cases')
+// GsapAnimationScrubSections('#contacts', '#contacts')
+
 GsapAnimationTitles(".present__title",".present")
 GsapAnimationTitles(".about__title",".about")
 GsapAnimationTitles(".formats__title",".formats__title")
 GsapAnimationTitles(".catalog__title",".catalog__title")
 GsapAnimationTitles(".places__title",".places__title")
 GsapAnimationTitles(".cases__title",".cases__title")
-GsapAnimationTitles(".order-form__title",".order-form__title")
+GsapAnimationTitles("#contacts .order-form__title","#contacts")

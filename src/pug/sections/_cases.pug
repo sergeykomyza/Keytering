@@ -4,12 +4,12 @@ section.cases#case
 	.cases__sliderbox
 		.cases__slider.swiper.js-sliderCases 
 			.swiper-wrapper 
-				each item in [2, 3, 1, 3, 2, 1]
+				each item, i in ['Открытие музея Фаберже','Матчи ФК «Зенит» на стадионе «Газпром-Арена» более 5 лет','Открытие выставки NatGeo','Мероприятие фонда Дети бабочки','Концерт группировки ЛЕНИНГРАД','Концерт группы БИ-2']
 					.swiper-slide 
 						.case 
-							a(href=`img/compress/keys-slide-${item}.webp` data-fancybox="cases")
-								img.case__foto(src=`img/compress/keys-slide-${item}.webp`, alt="@")
-							span.case__name Открытие музея Фаберже
+							a(href=`img/original/keys-${i+1}.jpg` data-fancybox="cases")
+								img.case__foto(src=`img/original/keys-${i+1}.jpg`, alt="@")
+							span.case__name= item
 			.cases__nav
 				button.swiper-btn.swiper-btn-prev
 					img(src="img/svg/icon-keys-arrow-left.svg", alt="@")
